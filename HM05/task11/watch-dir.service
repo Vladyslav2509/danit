@@ -1,0 +1,14 @@
+[Unit]
+Description=Directory Watcher Service
+After=local-fs.target
+
+[Service]
+Type=simple
+User=vladyslav
+Environment="HOME=/home/vladyslav"
+ExecStart=/bin/bash /home/vladyslav/task10.sh
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
